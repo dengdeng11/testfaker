@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <script>
+      function copyLink() {
+        var e = document.getElementById('contentname');
+        e.select();
+        document.execCommand('copy');
+        alert("复制成功！");
+      }
+    </script>
 </head>
 <body>
 
 <p>获取信息如下：</p>
-<p>姓名：{{name}}</p>
-<p>电话号码：{{phone}}</p>
+<p>姓名：<text  id="contentname">{{name}} </text >
+<input type="button" onclick="copyLink();" value="点击复制"></input></p>
+<p>电话号码：<span id="contentphone">{{phone}} </span>
+<button id="copyphone">复制</button></p>
 <p>身份证号：{{idcard}}</p>
+<p>香港居民居住证：{{hkidcard}}</p>
+<p>澳门居民居住证：{{mcidcard}}</p>
+<p>台湾居民居住证：{{twidcard}}</p>
+<p>普通护照：{{passport}}</p>
+<p>香港居民来往内地通行证：{{hkeepft}}</p>
+<p>澳门居民来往内地通行证：{{mceepft}}</p>
+<p>统一社会信用代码：{{companycode}}</p>
 <a href="javascript:location.reload();">点击重新获取</a>
 </body>
 </html>
