@@ -19,7 +19,7 @@ pip download /test/downpackages(自己指定下载的目录) -r pkgversion.txt
 pkgversion.txt 中为Django==3.2.11  faker==11.3.0
 第三步：将downpackages 和 pkgversion.txt拷贝到不可联网的服务器
 第四步：在不联网服务器安装
-pip install --no-index --find-index=文件路径\downpackages -r pkgversion.txt
+pip3 install --no-index --find-links=文件路径\downpackages -r pkgversion.txt
 
 4、提供脚手架创建django项目
 django-admin startproject testdjango
